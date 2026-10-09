@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenQuest AI | Touch Grass</title>
+    <meta name="description" content="Discover personalized outdoor adventures with GreenQuest AI. Less scrolling, more living.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#" class="logo">🌿 GreenQuest <span>AI</span></a>
+        <span class="nav-tag">TOUCH GRASS, NOT SCREENS</span>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR DAILY DOSE OF NATURE</span>
+
+                <h1>Less scrolling.<br><span>More living.</span></h1>
+
+                <p>
+                    Your personal AI nature companion. Discover little
+                    adventures, reconnect with the outdoors, and make
+                    every day greener.
+                </p>
+
+                <a href="#planner" class="primary-btn">
+                    Find My Adventure ↗
+                </a>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong id="totalMinutes">0</strong>
+                        <small>Minutes Outside</small>
+                    </div>
+
+                    <div>
+                        <strong id="totalMissions">0</strong>
+                        <small>Missions Completed</small>
+                    </div>
+
+                    <div>
+                        <strong id="totalPoints">0</strong>
+                        <small>Nature Points</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-label">✦ Your world is waiting</div>
+            </div>
+        </section>
+
+        <!-- AI Planner -->
+        <section class="planner" id="planner">
+            <div class="section-heading">
+                <span class="eyebrow">MADE JUST FOR YOU</span>
+                <h2>Find Your Next Little Adventure.</h2>
+                <p>Tell the AI how you feel. Get outside. Come back a little happier.</p>
+            </div>
+
+            <div class="planner-card">
+                <form id="plannerForm">
+                    <label for="mood">How are you feeling today?</label>
+
+                    <select id="mood" name="mood" required>
+                        <option value="bored">😴 Bored</option>
+                        <option value="stressed">🌧️ Stressed</option>
+                        <option value="happy">☀️ Happy</option>
+                        <option value="curious">🔎 Curious</option>
+                        <option value="tired">🌱 Tired</option>
+                    </select>
+
+                    <label for="time">How much time do you have?</label>
+
+                    <select id="time" name="time" required>
+                        <option value="10">10 Minutes</option>
+                        <option value="20" selected>20 Minutes</option>
+                        <option value="30">30 Minutes</option>
+                        <option value="60">1 Hour</option>
+                    </select>
+
+                    <label for="activity">What sounds fun?</label>
+
+                    <select id="activity" name="activity" required>
+                        <option value="nature walk">🌳 Nature Walk</option>
+                        <option value="bird watching">🐦 Bird Watching</option>
+                        <option value="gardening">🪴 Gardening</option>
+                        <option value="photography">📸 Nature Photography</option>
+                        <option value="mindfulness">🧘 Outdoor Mindfulness</option>
+                        <option value="exploring plants">🍃 Exploring Plants</option>
+                    </select>
+
+                    <button type="submit" class="primary-btn generate-btn" id="generateBtn">
+                        ✨ Generate My Mission
+                    </button>
+
+                    <p class="privacy-note">
+                        🌱 Powered by open-weight AI with Ollama
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Mission Results -->
+        <section class="mission-section" id="missionSection">
+            <div class="section-heading">
+                <span class="eyebrow">YOUR NEXT QUEST</span>
+                <h2>Adventure Awaits.</h2>
+            </div>
+
+            <div class="mission-card" id="mission" aria-live="polite">
+                <div class="mission-icon">🌿</div>
+                <span class="mission-tag">YOUR NATURE MISSION</span>
+                <h3>Ready to Touch Grass?</h3>
+                <p>
+                    Choose your mood and let AI create a small
+                    outdoor adventure just for you.
+                </p>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact">
+            <div>
+                <span class="eyebrow">SMALL STEPS, GREENER DAYS</span>
+                <h2>Real Life Is the Main Character.</h2>
+                <p>
+                    AI plans the adventure. You experience the world.
+                    Take a break from your screen and reconnect with nature.
+                </p>
+            </div>
+
+            <div class="impact-icon" aria-hidden="true">🌎</div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🌿 GreenQuest AI · Built for the Touch Grass Challenge</p>
+            <p>Less Screen. More Green.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

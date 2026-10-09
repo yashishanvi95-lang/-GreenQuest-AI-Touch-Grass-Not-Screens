@@ -1,0 +1,434 @@
+
+:root {
+    --green: #245b42;
+    --green-dark: #183e2d;
+    --sage: #829b70;
+    --light-green: #eaf2e7;
+    --cream: #f8f7f0;
+    --white: #ffffff;
+    --text: #20362a;
+    --muted: #718075;
+    --border: #e3e8de;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--sage);
+}
+
+.nav-tag,
+.eyebrow {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+    padding: 50px 0 80px;
+}
+
+.hero h1,
+.section-heading h2,
+.impact h2 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: -1px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.08;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #78976b;
+    font-style: italic;
+}
+
+.hero-content > p {
+    max-width: 480px;
+    color: var(--muted);
+    margin-bottom: 27px;
+}
+
+.primary-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 12px;
+    background: var(--green);
+    color: var(--white);
+    padding: 14px 22px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.primary-btn:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.primary-btn:focus-visible,
+select:focus-visible,
+.complete-btn:focus-visible {
+    outline: 3px solid var(--sage);
+    outline-offset: 3px;
+}
+
+.hero-image {
+    position: relative;
+    min-height: 420px;
+    border-radius: 28px;
+    background:
+        linear-gradient(180deg, transparent 45%, #142b1b99),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85")
+        center / cover;
+    box-shadow: 0 20px 50px #314b3020;
+}
+
+.image-label {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #ffffffeb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Statistics */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    color: var(--green);
+    font-size: 26px;
+}
+
+.hero-stats small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* Planner and section headings */
+.planner,
+.mission-section {
+    padding: 45px 0 65px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.section-heading h2,
+.impact h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Form */
+.planner-card,
+.mission-card {
+    max-width: 760px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: 0 12px 40px #344b2910;
+}
+
+.planner-card label {
+    display: block;
+    margin: 16px 0 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.planner-card select {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dfe5d9;
+    border-radius: 10px;
+    background: #fbfcf8;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.generate-btn {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.generate-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+.privacy-note {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* AI Mission */
+.mission-card {
+    padding: 38px;
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #f0f5eb);
+}
+
+.mission-icon {
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+.mission-tag {
+    color: #769766;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.mission-card h3 {
+    margin: 12px 0;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.mission-card p {
+    max-width: 550px;
+    margin: 12px auto;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.mission-card ul {
+    max-width: 520px;
+    margin: 20px auto;
+    list-style: none;
+    text-align: left;
+}
+
+.mission-card li {
+    margin: 7px 0;
+    padding: 12px;
+    border-radius: 9px;
+    background: var(--light-green);
+    font-size: 14px;
+}
+
+.complete-btn {
+    margin-top: 12px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #dbe9d4;
+    color: var(--green);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.complete-btn:hover {
+    background: #c9dfbf;
+}
+
+.complete-btn:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* Impact */
+.impact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 20px 0 65px;
+    padding: 38px;
+    border-radius: 24px;
+    background: var(--light-green);
+}
+
+.impact > div:first-child {
+    max-width: 650px;
+}
+
+.impact p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.impact-icon {
+    font-size: 70px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 750px) {
+    .nav-tag {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 30px 0 55px;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .planner-card,
+    .mission-card {
+        padding: 22px;
+    }
+
+    .impact {
+        padding: 24px;
+    }
+
+    .impact-icon {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .navbar {
+        padding: 18px 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-stats {
+        gap: 15px;
+    }
+
+    .hero-stats strong {
+        font-size: 22px;
+    }
+
+    .hero-stats small {
+        max-width: 90px;
+    }
+
+    .mission-card h3 {
+        font-size: 25px;
+    }
+
+    .impact {
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
